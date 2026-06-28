@@ -1,47 +1,29 @@
-# Personal Homepage Template
+# 张步若 / Toto 个人简历主页
 
-A bilingual (English / Chinese) static personal homepage template — no build step, no framework. Just HTML, CSS, and a little vanilla JavaScript. Designed for showcasing yourself to employers, collaborators, and recruiters.
+这是基于用户提供的 `homepage-template` 思路重做的一版静态个人主页，适合用于投递球星卡评级/代卖业务运营、卡牌交易内容运营、私域客户运营等岗位。
 
-![Template preview](preview.png)
+## 文件结构
 
-**[Live demo →](https://yizhixuanzhu.github.io/homepage-template/)**
+- `index.html`：主页，展示求职定位、核心数据、工作经历、技能与联系方式
+- `projects.html`：内容作品与业务案例
+- `leadership.html`：行业方向与评级/代卖业务路径
+- `education.html`：教育背景与基础能力
+- `highlights.html`：个人方向与长期目标
+- `resume.html`：网页版简历，可用浏览器打印/另存为 PDF
+- `styles.css`：样式文件
+- `script.js`：中英切换与轻量交互
+- `assets/profile.jpg`：头像/证件照，可自行替换
 
-## Features
+## 使用方式
 
-- 🌐 **EN / 中 language toggle** — built-in bilingual support via a simple translation dictionary
-- 🎠 **Snapshot carousel** — rotating highlight cards on the homepage
-- 🪟 **Glassmorphism design** — responsive layout with floating cards and soft atmosphere
-- 📱 **Mobile friendly** — works across screen sizes
-- 🚀 **Zero dependencies to install** — icons load from CDN ([Lucide](https://lucide.dev/))
+1. 将整个文件夹上传到 GitHub 仓库。
+2. 在 GitHub 仓库 `Settings → Pages` 中选择分支并启用 GitHub Pages。
+3. 公开部署前，如担心隐私，可在 `index.html` 和 `resume.html` 中删除或隐藏手机号。
+4. 如需替换头像，将新图片放入 `assets/`，并修改 HTML 中的 `assets/profile.jpg` 路径。
 
-## Structure
+## 建议
 
-- `index.html` — Homepage: hero, professional snapshot, experience timeline, skillkit, contact.
-- `education.html` — Education, coursework, honors, and competitions.
-- `projects.html` — Research and applied projects.
-- `leadership.html` — Leadership and social impact.
-- `highlights.html` — Personal interests.
-- `styles.css` — Shared responsive styling (no edits needed unless restyling).
-- `script.js` — Language toggle, carousel, and icon initialization. **The Chinese translations live in the `zhTranslations` object at the top — edit them there.**
-- `profile_photo.svg` — Placeholder portrait. Replace with your own photo.
+投递时可以同时附：
 
-## How to customize
-
-1. **Replace placeholder text.** Search the HTML files for placeholders like `Your Name`, `Company A`, `Project One Title` and fill in your real content. The English text lives in the HTML files.
-2. **Update the Chinese translations.** Open `script.js` and edit the `zhTranslations` dictionary at the top. Each key (e.g. `"hero.name"`) matches a `data-i18n` attribute in the HTML.
-3. **Add your photo.** Replace `profile_photo.svg` with your own image (update the `src` in all five HTML files if you change the filename).
-4. **Add your CVs (optional).** Drop `CV_English.pdf` and `CV_Chinese.pdf` next to `index.html`, or remove the two CV buttons in `index.html` if you don't need them.
-5. **Update contact links.** In `index.html`, replace the `mailto:`, `tel:`, and LinkedIn URLs with your own.
-6. **Adjust sections.** Each experience / project / education entry is a self-contained `<article>` block — copy, delete, or reorder them freely. If you add new translated text, give it a new `data-i18n` key and add the matching entry in `zhTranslations`.
-
-## Publish
-
-Any static host works:
-
-1. **GitHub Pages** — create a repository, upload these files, then enable Pages in the repository settings (Settings → Pages → choose your branch).
-2. **Netlify** — drag this folder into [Netlify Drop](https://app.netlify.com/drop).
-3. **Vercel** — import the folder/repository as a static project.
-
-## License
-
-Free to use and modify for your own personal homepage.
+- PDF 简历：用于招聘平台快速查看
+- 个人主页链接：用于展示 Toto 内容作品、账号数据和评级/代卖方向规划
